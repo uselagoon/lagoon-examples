@@ -1,0 +1,24 @@
+[submodule "drupal9-simple"]
+	path = drupal9-simple
+	url = https://github.com/amazeeio/drupal-example-simple.git
+	branch = 9.x
+[submodule "drupal8-simple"]
+	path = drupal8-simple
+	url = https://github.com/amazeeio/drupal-example-simple.git
+	branch = 8.x
+[submodule "drupal9-advanced"]
+	path = drupal9-advanced
+	url = https://github.com/amazeeio/drupal-example-simple.git
+	branch = 9.x-advanced
+[submodule "wordpress-simple"]
+	path = wordpress-simple
+	url = https://github.com/amazeeio/wordpress-example.git
+	branch = lando
+[submodule "silverstripe-simple"]
+	path = silverstripe-simple
+	url = https://github.com/amazeeio/silverstripe-example.git
+	branch = master
+[submodule "silverstripe-advanced"]
+	path = silverstripe-advanced
+	url = https://github.com/amazeeio/silverstripe-example.git
+	branch = redis_solr
