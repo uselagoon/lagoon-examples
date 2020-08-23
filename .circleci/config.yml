@@ -20,6 +20,10 @@ jobs:
             sudo dpkg -i lando-stable.deb	
             lando version
       - run:
+          name: Install yarn
+          command: |
+            curl -o- -L https://yarnpkg.com/install.sh | bash
+      - run:
           name: Install yarn packages
           command: |
             yarn install
