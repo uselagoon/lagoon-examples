@@ -31,8 +31,8 @@ jobs:
       - run:
           name: Generate and run all tests
           command: | 
-            yarn generate:tests
-            yarn test:functional
+            yarn generate-tests
+            yarn test:all
 
 workflows:
   version: 2
