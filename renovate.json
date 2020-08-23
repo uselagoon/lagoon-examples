@@ -9,7 +9,7 @@
     {
       "managers": ["git-submodules"],
       "automerge": true,
-      "automergeType"="pr",
+      "automergeType": "pr",
       "requiredStatusChecks": null
     }
   ]
