@@ -1,0 +1,36 @@
+# CircleCI configuration file
+
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-1604:202007-01
+    steps:
+      - checkout
+      - run:
+          name: Install pygmy-go
+          command: | 
+            curl -L https://github.com/fubarhouse/pygmy-go/releases/download/v0.4.0/pygmy-go_0.4.0_linux_amd64.tar.gz | sudo tar -xz --directory /usr/local/bin
+            pygmy-go version
+      - run:
+          name: Install lando
+          command: | 
+            wget https://files.devwithlando.io/lando-stable.deb
+            sudo dpkg -i lando-stable.deb	
+            lando version
+      - run:
+          name: Install yarn packages
+          command: |
+            yarn install
+      - run:
+          name: Generate and run all tests
+          command: | 
+            yarn generate:tests
+            yarn test:functional
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
