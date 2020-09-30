@@ -24,5 +24,5 @@
 	branch = redis_solr
 [submodule "node-example"]
 	path = node-example
-	url = git@github.com:amazeeio/node-example.git
+	url = https://github.com/amazeeio/node-example.git
 	branch = master
