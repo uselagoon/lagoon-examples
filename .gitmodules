@@ -22,3 +22,7 @@
 	path = silverstripe-advanced
 	url = https://github.com/amazeeio/silverstripe-example.git
 	branch = redis_solr
+[submodule "node-example"]
+	path = node-example
+	url = https://github.com/amazeeio/node-example.git
+	branch = master
