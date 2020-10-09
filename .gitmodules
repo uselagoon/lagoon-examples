@@ -26,3 +26,7 @@
 	path = node-example
 	url = https://github.com/amazeeio/node-example.git
 	branch = master
+[submodule "drupal8-advanced"]
+	path = drupal8-advanced
+	url = https://github.com/amazeeio/drupal-example-simple.git
+	branch = 8.x-advanced
