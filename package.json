@@ -3,11 +3,12 @@
     "chai": "4.2.0",
     "command-line-test": "1.0.10",
     "leia-parser": "0.3.4",
-    "mocha": "8.1.3"
+    "mocha": "8.2.1"
   },
   "scripts": {
-    "generate-tests": "leia \"**/TESTING.md\" test -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests' --split-file",
+    "generate-tests": "leia \"**/TESTING*.md\" test -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests' --split-file",
     "test:all": "mocha --timeout 900000 test/*.func.js",
-    "test": "mocha --timeout 900000 "
+    "test": "mocha --timeout 900000 ",
+    "test-debug": "DEBUG=mocha:* mocha --timeout 900000 "
   }
 }
