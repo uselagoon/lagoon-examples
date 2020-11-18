@@ -7,6 +7,10 @@
   },
   "scripts": {
     "generate-tests": "leia \"**/TESTING*.md\" test -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests' --split-file",
+    "test:lando": "mocha --timeout 900000 test/lando*.func.js",
+    "test:dockercompose": "mocha --timeout 900000 test/docker*.func.js",
+    "test:simple": "mocha --timeout 900000 test/docker*simple*.func.js",
+    "test:advanced": "mocha --timeout 900000 test/docker*advanced*.func.js",
     "test:all": "mocha --timeout 900000 test/*.func.js",
     "test": "mocha --timeout 900000 ",
     "test-debug": "DEBUG=mocha:* mocha --timeout 900000 "
