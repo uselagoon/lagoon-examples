@@ -34,3 +34,7 @@
 	path = drupal9-postgres
 	url = https://github.com/amazeeio/drupal-example-simple.git
 	branch = 9.x-postgres
+[submodule "drupal9-php8"]
+	path = drupal9-php8
+	url = https://github.com/amazeeio/drupal-example-simple.git
+	branch = 9.x-php8
