@@ -27,15 +27,18 @@ jobs:
             curl -o- -L https://yarnpkg.com/install.sh | bash
             echo 'export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"' >> $BASH_ENV
       - run:
-          name: Install yarn packages
+          name: Install yarn packages and generate tests
           command: |
             yarn install
-      - run:
-          name: Generate and run all tests
-          command: | 
             yarn generate-tests
-            yarn test:all
-
+      - run:
+          name: Run all docker-compose tests
+          command: | 
+            yarn test:dockercompose
+      - run:
+          name: Run example Lando D9 advanced test
+          command: | 
+            yarn test test/lando-drupal-9-advanced-php-7-4-nginx-mariadb-solr-redis.func.js
 workflows:
   version: 2
   commit:
