@@ -40,6 +40,11 @@ jobs:
           command: | 
             git clean -fdx
       - run:
+          name: Install yarn packages and generate tests
+          command: |
+            yarn install
+            yarn generate-tests
+      - run:
           name: Run example Lando D9 advanced test
           command: | 
             yarn test test/lando-drupal-9-advanced-php-7-4-nginx-mariadb-solr-redis.func.js
