@@ -36,10 +36,9 @@ jobs:
           command: | 
             yarn test:dockercompose
       - run:
-          name: Run example Lando D9 advanced test
-          no_output_timeout: 30m
+          name: Run all Lando tests
           command: | 
-            yarn test-ci
+            yarn test:lando
 workflows:
   version: 2
   commit:
