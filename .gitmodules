@@ -13,7 +13,7 @@
 [submodule "wordpress-simple"]
 	path = wordpress-simple
 	url = https://github.com/amazeeio/wordpress-example.git
-	branch = lando
+	branch = main
 [submodule "silverstripe-simple"]
 	path = silverstripe-simple
 	url = https://github.com/amazeeio/silverstripe-example.git
