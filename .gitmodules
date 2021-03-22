@@ -25,7 +25,7 @@
 [submodule "node-example"]
 	path = node-example
 	url = https://github.com/amazeeio/node-example.git
-	branch = master
+	branch = main
 [submodule "drupal8-advanced"]
 	path = drupal8-advanced
 	url = https://github.com/amazeeio/drupal-example-simple.git
