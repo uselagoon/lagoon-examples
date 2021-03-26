@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "chai": "4.2.0",
+    "chai": "4.3.4",
     "command-line-test": "1.0.10",
     "leia-parser": "0.3.4",
     "mocha": "8.2.1"
