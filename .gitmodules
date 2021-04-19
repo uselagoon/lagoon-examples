@@ -13,7 +13,7 @@
 [submodule "wordpress-simple"]
 	path = wordpress-simple
 	url = https://github.com/amazeeio/wordpress-example.git
-	branch = lando
+	branch = main
 [submodule "silverstripe-simple"]
 	path = silverstripe-simple
 	url = https://github.com/amazeeio/silverstripe-example.git
@@ -25,7 +25,7 @@
 [submodule "node-example"]
 	path = node-example
 	url = https://github.com/amazeeio/node-example.git
-	branch = master
+	branch = main
 [submodule "drupal8-advanced"]
 	path = drupal8-advanced
 	url = https://github.com/amazeeio/drupal-example-simple.git
