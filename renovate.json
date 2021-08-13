@@ -9,9 +9,10 @@
   },
   "packageRules": [
     {
-      "managers": ["git-submodules"],
+      "groupName": "Submodule updates",
+      "matchManagers": ["git-submodules"],
       "automerge": true,
-      "automergeType": "pr",
+      "automergeType": "branch",
       "requiredStatusChecks": null
     }
   ]
