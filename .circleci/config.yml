@@ -6,9 +6,9 @@ jobs:
   build:
     docker:
       - image: cimg/base:2021.04
-    environment:
-      LANDO_VERSION: v3.3.2
-      PYGMY_GO_VERSION: v0.7.1
+        environment:
+          LANDO_VERSION: v3.3.2
+          PYGMY_GO_VERSION: v0.7.1
     steps:
       - checkout
       - run: git submodule sync
