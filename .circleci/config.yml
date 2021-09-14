@@ -13,13 +13,13 @@ jobs:
       - run:
           name: Install pygmy-go
           command: | 
-            curl -L https://github.com/fubarhouse/pygmy-go/releases/download/v0.4.0/pygmy-go_0.4.0_linux_amd64.tar.gz | sudo tar -xz --directory /usr/local/bin
+            curl -L https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.1/pygmy-go_0.7.1_linux_amd64.tar.gz | sudo tar -xz --directory /usr/local/bin
             pygmy-go version
       - run:
           name: Install lando
           command: | 
-            wget https://files.devwithlando.io/lando-stable.deb
-            sudo dpkg -i lando-stable.deb	
+            wget https://github.com/lando/lando/releases/download/v3.3.2/lando-x64-v3.3.2.deb
+            sudo dpkg -i lando-x64-v3.3.2.deb
             lando version
       - run:
           name: Install yarn
