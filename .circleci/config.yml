@@ -4,8 +4,11 @@ version: 2.1
 
 jobs:
   build:
-    machine:
-      image: ubuntu-2004:202107-02
+    docker:
+      - image: cimg/base:2021.04
+    environment:
+      LANDO_VERSION: v3.3.2
+      PYGMY_GO_VERSION: v0.7.1
     steps:
       - checkout
       - run: git submodule sync
@@ -13,13 +16,13 @@ jobs:
       - run:
           name: Install pygmy-go
           command: | 
-            curl -L https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.1/pygmy-go_0.7.1_linux_amd64.tar.gz | sudo tar -xz --directory /usr/local/bin
+            curl -L https://github.com/fubarhouse/pygmy-go/releases/download/$PYGMY_GO_VERSION/pygmy-go_$PYGMY_GO_VERSION_linux_amd64.tar.gz | sudo tar -xz --directory /usr/local/bin
             pygmy-go version
       - run:
           name: Install lando
           command: | 
-            wget https://github.com/lando/lando/releases/download/v3.3.2/lando-x64-v3.3.2.deb
-            sudo dpkg -i lando-x64-v3.3.2.deb
+            wget https://github.com/lando/lando/releases/download/$LANDO_VERSION/lando-x64-$LANDO_VERSION.deb
+            sudo dpkg -i lando-x64-$LANDO_VERSION.deb
             lando version
       - run:
           name: Install yarn
