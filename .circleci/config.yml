@@ -13,7 +13,8 @@ jobs:
       - run:
           name: Install pygmy-go
           command: | 
-            PYGMY_GO_VERSION=0.7.1
+            PYGMY_GO_VERSION_V=v0.7.1
+            PYGMY_GO_VERSION=$(echo "${PYGMY_GO_VERSION_V}" | sed 's/^v//')
             echo "${PYGMY_GO_VERSION}"
             curl -L https://github.com/fubarhouse/pygmy-go/releases/download/v${PYGMY_GO_VERSION}/pygmy-go_${PYGMY_GO_VERSION}_linux_amd64.tar.gz | sudo tar -xz --directory /usr/local/bin
             pygmy-go version

@@ -7,6 +7,20 @@
   "git-submodules": {
     "enabled": true
   },
+  "regexManagers": [
+    {
+      "fileMatch": ["^.circleci/config.yml$"],
+      "matchStrings": ["PYGMY_GO_VERSION_V=(?<currentValue>.*?)"],
+      "depNameTemplate": "fubarhouse/pygmy-go",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "fileMatch": ["^.circleci/config.yml$"],
+      "matchStrings": ["LANDO_VERSION=(?<currentValue>.*?)"],
+      "depNameTemplate": "lando/lando-cli",
+      "datasourceTemplate": "github-releases"
+    }
+  ],
   "packageRules": [
     {
       "groupName": "Submodule updates",
