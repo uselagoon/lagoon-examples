@@ -38,3 +38,7 @@
 	path = drupal9-php8
 	url = https://github.com/amazeeio/drupal-example-simple.git
 	branch = 9.x-php8
+[submodule "drupal9-elastic"]
+	path = drupal9-elastic
+	url = https://github.com/amazeeio/drupal-example-simple.git
+	branch = 9.x-elastic
