@@ -11,6 +11,10 @@ jobs:
       - run: git submodule sync
       - run: git submodule update --init
       - run:
+          name: set vm.max_map_count for elasticsearch
+          command: |
+            sudo sysctl -w vm.max_map_count=262144
+      - run:
           name: Install pygmy-go
           command: | 
             PYGMY_GO_VERSION_V=v0.7.1
@@ -21,7 +25,7 @@ jobs:
       - run:
           name: Install lando
           command: | 
-            LANDO_VERSION=v3.3.2
+            LANDO_VERSION=v3.4.2
             wget https://github.com/lando/lando/releases/download/${LANDO_VERSION}/lando-x64-${LANDO_VERSION}.deb
             sudo dpkg -i lando-x64-${LANDO_VERSION}.deb
             lando version
