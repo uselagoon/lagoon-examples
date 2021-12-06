@@ -3,7 +3,7 @@
     "chai": "4.3.4",
     "command-line-test": "1.0.10",
     "leia-parser": "0.4.0",
-    "mocha": "9.1.1"
+    "mocha": "9.1.3"
   },
   "scripts": {
     "generate-tests": "leia \"**/TESTING*.md\" test -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests' --split-file",
