@@ -1,0 +1,56 @@
+name: Drupal test routine
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'new_repos'
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  test-suite:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: "0"
+    - name: install Lando
+      run: |
+        wget https://files.lando.dev/installer/lando-x64-stable.deb
+        sudo dpkg --ignore-depends=docker-ce -i lando-x64-stable.deb
+    - name: Report versions
+      run: |
+        docker version
+        docker-compose version
+        lando version
+        node -v
+        yarn -v
+    - name: Update git submodules
+      run: |
+        git submodule sync
+        git submodule update --init
+    - name: Install test harness
+      run: |
+        yarn install
+    - name: Generate test files
+      run: |
+        yarn generate-tests
+    - name: Run docker-compose tests
+      run: |
+        yarn test:dockercompose
+    # - name: Run Lando tests
+    #   timeout-minutes: 10
+    #   continue-on-error: true
+    #   run: |
+    #     yq e -i '.services.cli.overrides.environment.LANDO_WEBROOT_USER = "runner"' .lando.yml
+    #     yq e -i '.services.cli.overrides.environment.LANDO_WEBROOT_GROUP = "docker"' .lando.yml
+    #     yq e -i '.services.php.overrides.environment.LANDO_WEBROOT_USER = "runner"' .lando.yml
+    #     yq e -i '.services.php.overrides.environment.LANDO_WEBROOT_GROUP = "docker"' .lando.yml
+    #     yarn mocha --timeout 900000 test/*lando*.func.js
+    # - name: Show Lando logs
+    #   continue-on-error: true
+    #   run: |
+    #     docker-compose -p drupal9base logs
