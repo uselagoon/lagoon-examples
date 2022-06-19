@@ -26,8 +26,7 @@
       "groupName": "Submodule updates",
       "matchManagers": ["git-submodules"],
       "automerge": true,
-      "automergeType": "branch",
-      "requiredStatusChecks": null
+      "automergeType": "pr"
     }
   ]
 }
