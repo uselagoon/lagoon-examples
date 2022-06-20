@@ -3,6 +3,7 @@
     "config:base"
   ],
   "dependencyDashboard": true,
+  "platformCommit": false,
   "prHourlyLimit": 0,
   "git-submodules": {
     "enabled": true
