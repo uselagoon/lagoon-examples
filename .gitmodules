@@ -1,7 +1,3 @@
-[submodule "drupal9-advanced"]
-	path = drupal9-advanced
-	url = https://github.com/amazeeio/drupal-example-simple.git
-	branch = 9.x-advanced
 [submodule "wordpress-simple"]
 	path = wordpress-simple
 	url = https://github.com/amazeeio/wordpress-example.git
@@ -33,4 +29,8 @@
 [submodule "drupal9-elastic"]
 	path = drupal9-elastic
 	url = https://github.com/lagoon-examples/drupal9-elastic.git
+	branch = main
+[submodule "drupal9-full"]
+	path = drupal9-full
+	url = https://github.com/lagoon-examples/drupal9-full.git
 	branch = main
