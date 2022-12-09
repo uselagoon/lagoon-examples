@@ -34,3 +34,7 @@
 	path = drupal9-full
 	url = https://github.com/lagoon-examples/drupal9-full.git
 	branch = main
+[submodule "drupal10-base"]
+	path = drupal10-base
+	url = https://github.com/lagoon-examples/drupal10-base.git
+	branch = main
