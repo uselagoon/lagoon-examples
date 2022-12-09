@@ -38,3 +38,7 @@
 	path = drupal10-base
 	url = https://github.com/lagoon-examples/drupal10-base.git
 	branch = main
+[submodule "drupal9-opensearch"]
+	path = drupal9-opensearch
+	url = https://github.com/lagoon-examples/drupal9-elastic.git
+	branch = opensearch
