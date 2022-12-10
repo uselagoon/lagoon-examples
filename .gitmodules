@@ -1,7 +1,3 @@
-[submodule "wordpress-simple"]
-	path = wordpress-simple
-	url = https://github.com/amazeeio/wordpress-example.git
-	branch = main
 [submodule "silverstripe-simple"]
 	path = silverstripe-simple
 	url = https://github.com/amazeeio/silverstripe-example.git
@@ -42,3 +38,11 @@
 	path = drupal9-opensearch
 	url = https://github.com/lagoon-examples/drupal9-elastic.git
 	branch = opensearch
+[submodule "drupal9-varnish"]
+	path = drupal9-varnish
+	url = https://github.com/lagoon-examples/drupal9-varnish.git
+	branch = main
+[submodule "wordpress-base"]
+	path = wordpress-base
+	url = https://github.com/lagoon-examples/wordpress-base.git
+	branch = main
