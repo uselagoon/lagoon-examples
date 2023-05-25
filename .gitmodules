@@ -22,10 +22,6 @@
 	path = drupal9-postgres
 	url = https://github.com/lagoon-examples/drupal9-postgres.git
 	branch = main
-[submodule "drupal9-elastic"]
-	path = drupal9-elastic
-	url = https://github.com/lagoon-examples/drupal9-elastic.git
-	branch = main
 [submodule "drupal9-full"]
 	path = drupal9-full
 	url = https://github.com/lagoon-examples/drupal9-full.git
