@@ -10,10 +10,6 @@
 	path = node-example
 	url = https://github.com/amazeeio/node-example.git
 	branch = main
-[submodule "drupal9-base"]
-	path = drupal9-base
-	url = https://github.com/lagoon-examples/drupal9-base.git
-	branch = main
 [submodule "drupal9-solr"]
 	path = drupal9-solr
 	url = https://github.com/lagoon-examples/drupal9-solr.git
@@ -30,10 +26,6 @@
 	path = drupal10-base
 	url = https://github.com/lagoon-examples/drupal10-base.git
 	branch = main
-[submodule "drupal9-opensearch"]
-	path = drupal9-opensearch
-	url = https://github.com/lagoon-examples/drupal9-elastic.git
-	branch = opensearch
 [submodule "drupal9-varnish"]
 	path = drupal9-varnish
 	url = https://github.com/lagoon-examples/drupal9-varnish.git
