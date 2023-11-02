@@ -22,14 +22,6 @@
 	path = drupal-full
 	url = https://github.com/lagoon-examples/drupal9-full.git
 	branch = main
-[submodule "drupal10-base"]
-	path = drupal10-base
-	url = https://github.com/lagoon-examples/drupal10-base.git
-	branch = main
-[submodule "drupal9-varnish"]
-	path = drupal9-varnish
-	url = https://github.com/lagoon-examples/drupal9-varnish.git
-	branch = main
 [submodule "wordpress-base"]
 	path = wordpress-base
 	url = https://github.com/lagoon-examples/wordpress-base.git
