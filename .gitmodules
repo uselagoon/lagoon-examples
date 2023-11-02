@@ -34,3 +34,11 @@
 	path = wordpress-base
 	url = https://github.com/lagoon-examples/wordpress-base.git
 	branch = main
+[submodule "drupal-base"]
+	path = drupal-base
+	url = https://github.com/lagoon-examples/drupal-base.git
+	branch = main
+[submodule "drupal-opensearch"]
+	path = drupal-opensearch
+	url = https://github.com/lagoon-examples/drupal-opensearch.git
+	branch = main
