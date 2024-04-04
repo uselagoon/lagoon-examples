@@ -10,17 +10,13 @@
 	path = node-example
 	url = https://github.com/amazeeio/node-example.git
 	branch = main
-[submodule "drupal9-solr"]
+[submodule "drupal-solr"]
 	path = drupal-solr
-	url = https://github.com/lagoon-examples/drupal9-solr.git
+	url = https://github.com/lagoon-examples/drupal-solr.git
 	branch = main
-[submodule "drupal9-postgres"]
-	path = drupal9-postgres
-	url = https://github.com/lagoon-examples/drupal9-postgres.git
-	branch = main
-[submodule "drupal9-full"]
-	path = drupal-full
-	url = https://github.com/lagoon-examples/drupal9-full.git
+[submodule "drupal-postgres"]
+	path = drupal-postgres
+	url = https://github.com/lagoon-examples/drupal-postgres.git
 	branch = main
 [submodule "wordpress-base"]
 	path = wordpress-base
