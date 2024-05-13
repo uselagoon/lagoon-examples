@@ -34,12 +34,12 @@ jobs:
     - name: Install test harness
       run: |
         yarn install
-    - name: Generate test files
+    - name: Run simple docker-compose tests
       run: |
-        yarn generate-tests
-    - name: Run docker-compose tests
+        yarn test:simple
+    - name: Run advanced docker-compose tests
       run: |
-        yarn test:dockercompose
+        yarn test:advanced
     # - name: Run Lando tests
     #   timeout-minutes: 10
     #   continue-on-error: true

@@ -1,18 +1,14 @@
 {
   "dependencies": {
-    "chai": "4.4.1",
-    "command-line-test": "1.0.10",
-    "leia-parser": "0.4.0",
-    "mocha": "10.4.0"
+    "@lando/leia": "^1.0.0-beta.3"
   },
   "scripts": {
-    "generate-tests": "leia \"**/TESTING*.md\" test -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests' --split-file",
-    "test:lando": "mocha --timeout 900000 test/lando*.func.js",
-    "test:dockercompose": "mocha --timeout 900000 test/docker*.func.js",
-    "test:simple": "mocha --timeout 900000 test/docker*base*.func.js",
-    "test:advanced": "mocha --timeout 900000 test/docker*option*.func.js",
-    "test:all": "mocha --timeout 900000 test/*.func.js",
-    "test": "mocha --timeout 900000 ",
-    "test-debug": "DEBUG=mocha:* mocha --timeout 900000 "
+    "test:lando": "leia **/TESTING_lando.md -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests'",
+    "test:dockercompose": "leia **/TESTING_dockercompose.md -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests'",
+    "test:simple": "leia *-base/TESTING_dockercompose.md -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests'",
+    "test:advanced": "leia **/TESTING_dockercompose.md --ignore *-base/TESTING_dockercompose.md -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests'",
+    "test:all": "leia **/TESTING_*.md -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests'",
+    "test": "leia $TEST -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests'",
+    "test-debug": "leia $TEST -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests' --debug"
   }
 }
