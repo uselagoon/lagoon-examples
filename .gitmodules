@@ -22,3 +22,7 @@
 	path = drupal-opensearch
 	url = https://github.com/lagoon-examples/drupal-opensearch.git
 	branch = main
+[submodule "drupal-cachebackend"]
+	path = drupal-cachebackend
+	url = https://github.com/lagoon-examples/drupal-cachebackend.git
+	branch = main
