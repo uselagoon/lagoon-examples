@@ -8,7 +8,7 @@ All of these examples are collected here to enable discovery, testing and cross-
 The folders are added as submodules from the branches of the host projects
 To add a new example:
 
-1. `git submodule add -b 9.x-php8 https://github.com/amazeeio/drupal-example-simple.git drupal9-php8`
+1. `git submodule add -b main https://github.com/lagoon-examples/drupal-base.git drupal-base`
 2. `git submodule update --init`
 
 To refresh local submodules
