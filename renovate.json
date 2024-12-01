@@ -1,23 +1,33 @@
 {
   "extends": [
-    "config:base"
+    "config:recommended"
   ],
   "dependencyDashboard": true,
-  "platformCommit": false,
+  "platformCommit": "disabled",
   "prHourlyLimit": 0,
   "git-submodules": {
     "enabled": true
   },
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": ["^.circleci/config.yml$"],
-      "matchStrings": ["PYGMY_GO_VERSION_V=(?<currentValue>.*?)"],
+      "customType": "regex",
+      "fileMatch": [
+        "^.circleci/config.yml$"
+      ],
+      "matchStrings": [
+        "PYGMY_GO_VERSION_V=(?<currentValue>.*?)"
+      ],
       "depNameTemplate": "fubarhouse/pygmy-go",
       "datasourceTemplate": "github-releases"
     },
     {
-      "fileMatch": ["^.circleci/config.yml$"],
-      "matchStrings": ["LANDO_VERSION=(?<currentValue>.*?)"],
+      "customType": "regex",
+      "fileMatch": [
+        "^.circleci/config.yml$"
+      ],
+      "matchStrings": [
+        "LANDO_VERSION=(?<currentValue>.*?)"
+      ],
       "depNameTemplate": "lando/lando-cli",
       "datasourceTemplate": "github-releases"
     }
@@ -25,7 +35,9 @@
   "packageRules": [
     {
       "groupName": "Submodule updates",
-      "matchManagers": ["git-submodules"],
+      "matchManagers": [
+        "git-submodules"
+      ],
       "automerge": true,
       "automergeType": "pr"
     }
