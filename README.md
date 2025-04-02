@@ -14,6 +14,12 @@ To add a new example:
 To refresh local submodules
 1. `git submodule update --remote`
 
+## Working with all examples
+
+To perform an action against all examples (submodules)
+
+* `git submodule foreach 'docker compose up -d --build'`
+
 ## Testing examples
 
 This repository uses [Leia](https://github.com/lando/leia) from the awesome Lando team to run tests.
