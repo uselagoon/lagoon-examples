@@ -26,3 +26,7 @@
 	path = drupal-cachebackend
 	url = https://github.com/lagoon-examples/drupal-cachebackend.git
 	branch = main
+[submodule "drupal11-base"]
+	path = drupal11-base
+	url = https://github.com/lagoon-examples/drupalnext-base.git
+	branch = main
