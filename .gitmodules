@@ -30,3 +30,7 @@
 	path = drupalnext-base
 	url = https://github.com/lagoon-examples/drupalnext-base.git
 	branch = main
+[submodule "drupal-10-base"]
+	path = drupal-10-base
+	url = https://github.com/lagoon-examples/drupal-10-base.git
+	branch = main
