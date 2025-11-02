@@ -11,8 +11,8 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
-        "^.circleci/config.yml$"
+      "managerFilePatterns": [
+        "/^.circleci/config.yml$/"
       ],
       "matchStrings": [
         "PYGMY_GO_VERSION_V=(?<currentValue>.*?)"
@@ -22,8 +22,8 @@
     },
     {
       "customType": "regex",
-      "fileMatch": [
-        "^.circleci/config.yml$"
+      "managerFilePatterns": [
+        "/^.circleci/config.yml$/"
       ],
       "matchStrings": [
         "LANDO_VERSION=(?<currentValue>.*?)"
