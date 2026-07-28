@@ -1,0 +1,21 @@
+# Port of renovate's submodule automerge: enable GitHub auto-merge on
+# dependabot submodule PRs so they merge once required checks pass.
+# All other dependabot PRs (npm, github-actions) still require human review.
+# Requires "Allow auto-merge" in repo settings and branch protection
+# with required checks on main.
+name: Dependabot auto-merge
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  automerge:
+    if: github.actor == 'dependabot[bot]' && startsWith(github.head_ref, 'dependabot/gitsubmodule')
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
