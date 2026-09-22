@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@lando/leia": "^1.0.0-beta.3"
+    "@lando/leia": "^2.0.0"
   },
   "scripts": {
     "test:lando": "leia **/TESTING_lando.md -r 2 -s 'Start up tests' -t 'Verification commands' -c 'Destroy tests'",
